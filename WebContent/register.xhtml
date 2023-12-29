@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Kayıt Formu</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputLabel for="kullaniciAdi" value="Kullanıcı Adı: "/>
+            <h:inputText id="kullaniciAdi" value="#{kullaniciBean.kullaniciAdi}" required="true" requiredMessage="Kullanıcı Adı gereklidir"/>
+            <br/>
+            <h:outputLabel for="sifre" value="Şifre: "/>
+            <h:inputSecret id="sifre" value="#{kullaniciBean.sifre}" required="true" requiredMessage="Şifre gereklidir"/>
+            <br/>
+            <h:outputLabel for="email" value="Email: "/>
+            <h:inputText id="email" value="#{kullaniciBean.email}"/>
+            <br/>
+            <h:commandButton value="Kayıt Ol" action="#{kullaniciBean.kayitOl}"/>
+            
+        </h:form>
+    </h:body>
+</html>
